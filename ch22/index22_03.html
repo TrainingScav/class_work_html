@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 
+            CSS 우선순위
+            1. !important - 가장 높은 우선순위를 가짐
+            2. 인라인 스타일 - HTML 태그 안에 직접 작성된 style 속성
+            3. id 선택자 : #id 로 지정된 스타일
+            4. class 선택자 : .class 로 지정된 스타일
+            5. 태그 선택자 : div, p 같은 태그 이름으로 지정된 스타일
+            6.  
+        */
+      p {
+        color: #808080; /* 그레이 색상 (태그 선택자) */
+      }
+      .highlight {
+        color: #32cd32; /* 라임 그린 색상 (class 선택자) */
+      }
+      #special {
+        color: #ff4500; /* 오렌지 레드 색상 (id 선택자) */
+      }
+      p[style] {
+        color: #4682b4 !important; /* 스틸 블루 색상 (!important) */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p id="special" class="highlight" style="color: brown">텍스트</p>
+    </div>
+  </body>
+</html>

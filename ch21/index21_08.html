@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 600px;
+            background-color: bisque;
+        }
+        
+        .container_item1, .container_item2, .container_item3 {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            border: 2px solid black;
+            border-radius: 10px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grow {
+            flex-grow: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>align-content 속성을 더 알아 보자</h3>
+
+    <div class="container">
+        <div class="container_item1">
+            <div class="item grow">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+        <div class="container_item2">
+            <div class="item">4</div>
+            <div class="item grow">5</div>
+            <div class="item">6</div>
+        </div>
+        <div class="container_item3">
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item grow">9</div>
+        </div>
+    </div>
+</body>
+</html>
